@@ -54,55 +54,58 @@
 
     let counter = 0;
     let window00,window01,window03,window04,window05,window06,window07,window08,window09;
-
+    let height = window.screen.height;
+    let width = window.screen.width;
   
     const interval = setInterval(function() {
         if(counter == 0){
             window00 =  window.open("", "", "width=400, height=300",);
-            window00.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window00.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window00.moveTo(Math.random() * width,Math.random() * height);
+            window00.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 1){
             window01 =  window.open("", "", "width=400, height=300");
-            window01.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window01.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window01.moveTo(Math.random() * width,Math.random() * height);
+            window01.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 2) {
             window02 =  window.open("", "", "width=400, height=300");
-            window02.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window02.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window02.moveTo(Math.random() * width,Math.random() * height);
+            window02.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 3) {
-            window03 =  window.open("", "", "width=400, height=300");
-            window03.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window03.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window03 =  window.open("", "", "width=400, height=300");   
+            window03.moveTo(Math.random() * width,Math.random() * height);
+            window03.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 4) {
             window04 =  window.open("", "", "width=400, height=300");
-            window04.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window04.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window04.moveTo(Math.random() * width,Math.random() * height);
+            window04.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 5) {
             window05 =  window.open("", "", "width=400, height=300");
-            window05.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window05.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window05.moveTo(Math.random() * width,Math.random() * height);
+            window05.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 6) {
             window06 =  window.open("", "", "width=400, height=300");
-            window06.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window06.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window06.moveTo(Math.random() * width,Math.random() * height);
+            window06.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 7) {
             window07 =  window.open("", "", "width=400, height=300");
-            window07.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window07.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window07.moveTo(Math.random() * width,Math.random() * height);
+            window07.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 8) {
             window08 =  window.open("", "", "width=400, height=300");
-            window08.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window08.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
+            window08.moveTo(Math.random() * width,Math.random() * height);
+            window08.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
         } else if (counter == 9) {
             window09 = window.open("", "", "width=400, height=300");
-            window09.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
-            window09.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
-        } else {
-            clearInterval(interval);
-        }
+            window09.moveTo(Math.random() * width,Math.random() * height);
+            window09.resizeTo(Math.floor(Math.random() * 201) + 100,Math.floor(Math.random() * 201 + 100));
+        } 
         counter++;
     }, 5000);
     
+    if(counter == 10){
+        clearInterval(interval);
+    }
+
     console.log(window.screen.height,window.screen.width);
     </script>
     <button onclick="creacionVentana()">Haz click</button>
