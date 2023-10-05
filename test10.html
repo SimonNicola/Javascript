@@ -94,7 +94,7 @@
             window08.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
             window08.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
         } else if (counter == 9) {
-            window09 =  window.open("", "", "width=400, height=300");
+            window09 = window.open("", "", "width=400, height=300");
             window09.moveTo(Math.floor(Math.random() * Window.screen.width),Math.floor(Math.random() * Window.screen.height))
             window09.resizeTo(Math.floor(Math.random() * 201 + 100,Math.floor(Math.random() * 201 + 100)))
         } else {
@@ -103,6 +103,7 @@
         counter++;
     }, 5000);
     
+    console.log(window.screen.height,window.screen.width);
     </script>
     <button onclick="creacionVentana()">Haz click</button>
 </body>
